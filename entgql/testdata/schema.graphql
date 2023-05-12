@@ -72,6 +72,7 @@ input CreateUserInput {
   username: UUID
   password: String
   metadata: Map
+  neededMetadata: Map!
   groupIDs: [ID!]
   friendIDs: [ID!]
 }
@@ -229,6 +230,7 @@ input UpdateUserInput {
   clearPassword: Boolean
   metadata: Map
   clearMetadata: Boolean
+  neededMetadata: Map
   addGroupIDs: [ID!]
   removeGroupIDs: [ID!]
   clearGroups: Boolean
@@ -241,6 +243,7 @@ type User {
   name: String!
   username: UUID!
   metadata: Map
+  neededMetadata: Map!
   """The groups of the user"""
   groups: [Group!]
   friends: [User!]

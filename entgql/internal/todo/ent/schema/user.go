@@ -40,6 +40,7 @@ func (User) Fields() []ent.Field {
 			Optional(),
 		field.JSON("metadata", map[string]interface{}{}).
 			Optional(),
+		field.JSON("needed_metadata", map[string]interface{}{}),
 	}
 }
 
